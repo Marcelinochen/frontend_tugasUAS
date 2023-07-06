@@ -47,3 +47,27 @@ const EditUser = () => {
                     <div className='field'>
                         <label className="label">Email</label>
                         <div className="control">
+                        <input type="text" className="input" value={email} onChange={(e)=> setEmail(e.target.value)} placeholder='Email'/>
+                        </div> 
+                    </div>
+                    <div className='field'>
+                        <label className="label">Jenis Kelamin</label>
+                        <div className="control">
+                            <div className="select is-fullwidth">
+                                <select value={gender} onChange={(e)=> setGender(e.target.value)}>
+                                    <option value="laki-laki">Laki-laki</option>
+                                    <option value="perempuan">Perempuan</option>
+                                </select>
+                            </div>
+                        </div> 
+                    </div>
+                    <div className='field'>
+                        <button type='submit' className='button is-success'>Update sekarang</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    )
+}
+
+export default EditUser;
